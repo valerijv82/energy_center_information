@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <h1 class="table-h1">List of database tables</h1>
+
+
+<div class="db-list">
+    <ul class="db-list-ul">
+        {% for value in table_names_list %}
+            <li class="db-list-li"><a class="db-list-a" href="/generated/{{ value }}" id="{{ value }}">{{ value }}</a></li>
+        {% endfor %}
+    </ul>
+    
+</div>
+
+{% endblock content %}

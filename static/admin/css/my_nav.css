@@ -1,0 +1,88 @@
+.navik {
+    padding-bottom: 85px;
+}
+
+.my-nav {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background: #e3dfde;
+    height: 70px;
+    width: 100%;
+    position: fixed;
+
+}
+
+.my-nav li {
+    list-style: none;
+    font-family: cursive;
+    display: inline-block;
+    line-height: 50px;
+    margin: 5px;
+    
+}
+
+img.logo {
+    padding-left: 15px;
+    padding-top: 10px;
+
+}
+
+.my-nav ul {
+    float: right;
+    margin-right: 20px;
+}
+
+.my-nav #user-login-color {
+    color: #4b7a53;
+}
+
+.my-nav #user-logout-color {
+    color:#bd173d;
+}
+
+.my-nav ul li a {
+    color: #1a7d96;
+    font-size: 18px;
+    text-transform: uppercase;
+    border-radius: 5px;
+    padding: 4px;
+}
+
+a.active:hover {
+    background: #bec4cc;
+    transition: .3s;
+}
+
+.checkbtn {
+    font-size: 36px;
+    color: #bec4cc;
+    float: right;
+    line-height: 65px;
+    margin-right: 30px;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+
+
+@media (max-width: 900px) {
+  
+    .my-nav ul li a {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 630px) {
+    /* .checkbtn {
+        display: block;
+    } */
+    .my-nav ul li a {
+        font-size: 8px;
+        /* display: none; */
+    }
+}

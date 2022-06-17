@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+{% load static %}
+
+
+<div class="selection-bar">
+    <form  class="selector-form" action="" method="POST">{% csrf_token %}
+        <ul>
+            {% for field in form %}
+            <div class="field-flex">
+                <li class="field">
+                    <label for="{{ field.id_for_label }}" class="field-label" >{{field.label_tag}}</label>
+                    {{field}}
+                </li>
+            </div>
+            
+        {% endfor %}
+            
+            <!-- {{form.as_table}} -->
+            <button class="form-button" type="submit">Update</button>
+        </ul>
+
+        {% if messages %}
+            <ul class="messages">
+            {% for message in messages %}
+            <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+            {% endfor %}
+            </ul>
+        {% endif %}
+        
+    </form>
+
+</div>
+    {% if chart %}
+    <div class="chart_container">
+        
+        <img id="chart_img" src="{% static '/data_collection_web/media/plot.png' %}" alt="Chart">
+    </div>
+        {% endif %}
+
+<br>
+<p></p>
+
+<div>
+    <table class="customers" id="customers">
+        <tr>
+            {% for field in normal_table_names %}
+                <th>{{field}}</th>
+            {% endfor %}
+        </tr>
+            {% for x in query_objects %}
+        <tr>
+            {% for y in x %}
+                <td>{{y}}</td>
+            {% endfor %}
+        </tr>
+            {% endfor %}
+        <tr>
+            <td colspan="5" class="consuption-align">
+                Energy consumption sum: 
+            </td>
+            <td class="consuption-align">
+                {{energy_consumption_sum}}
+            </td>
+                
+        </tr>   
+    </table>
+    <table class="consumption-table" id="consumption-table">
+        
+    </table>
+</div>
+      
+{% endblock content %}

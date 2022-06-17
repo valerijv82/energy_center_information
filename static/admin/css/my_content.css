@@ -1,0 +1,19 @@
+
+div.img-container {
+    text-align: center;
+    padding: 30px;
+    
+  
+}
+
+div.request-img {
+    padding: 20px;
+    
+}
+
+div.request-img img {
+    max-width: 55%;
+    height: auto;
+    
+}
+

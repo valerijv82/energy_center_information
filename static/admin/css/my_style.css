@@ -1,0 +1,352 @@
+/*
+    DJANGO Admin styles
+*/
+
+/* NAV BAR */
+:root {
+    --clr-primary: #deded1;
+    --clr-primary-hover: #29e6a7;
+    --clr-gray100: #fffffa;
+    --clr-gray200: #cfd8dc;
+
+    --border-end-end-radius: .8em;
+
+}
+
+.nav-list {
+    /* top: 0; */
+    position: fixed;
+    width: 100%;
+    background-color: #C0C0C0;
+    box-shadow: 0px 0px 10px var(--clr-gray200);
+    margin: 0;
+    padding:0.3rem 0;
+    /* border-radius: var(--border-end-end-radius); */
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-family: "Myriad Pro", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 1.2rem;
+}
+
+.logo {
+    vertical-align: sub;
+}
+
+.nav-item {
+    font-size: 23px;
+    list-style: none;
+    margin-right: 3rem;
+}
+.nav-item-color{
+    color: #987A00;
+}
+.nav-item a {
+    text-decoration: none;
+    color: #444444;
+}
+.nav-item:first-child {
+    margin-right: auto;
+    margin-left: 1.5rem;
+}
+
+/* Button  */
+
+.btn-primary {
+    background: #FECB00;
+    border: none;
+    outline: none;
+    border-radius: var(--border-end-end-radius);
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: all 200ms ease-in;
+    font-family: "Myriad Pro", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 1.1rem;
+}
+
+
+/* customer selection form css */
+.selection-bar {
+    padding-top: 1.5rem;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 1rem;
+    font-size: 23px;
+    
+}
+.field-flex {
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-right: 1.5rem;
+    text-align: center;
+}
+.field {
+    list-style: none;
+    
+}
+
+.form-button {
+    font-size: 20px;
+    border-radius: var(--border-end-end-radius);
+    padding: 0.3rem .7rem;
+    border: none;
+    outline: none;
+    transition: all 200ms ease-in;
+    cursor: pointer;
+}
+
+
+
+.my-choice-field-class {
+    color: green;
+}
+
+
+
+/* request page img adjusting css*/
+
+.img-container {
+    text-align:center;
+    padding-top: 9rem;
+    
+  
+}
+
+div.request-img {
+    padding: 20px;
+    
+}
+
+div.request-img img {
+    max-width: 55%;
+    height: auto;
+    
+}
+
+
+/* body css */
+.grid-container {
+    display: grid;
+    
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    color: #333;
+    background: #fff;
+    background-color: white;
+    font-family: "Myriad Pro", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+}
+
+/* database list  */
+
+.db-list {
+    padding-top: 4rem;
+    font-family: "Myriad Pro", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    
+}
+.db-list-ul {
+    list-style: none;
+}
+.db-list-li {
+    padding-bottom: 1rem;
+    font-size: larger;
+    text-align:center;
+}
+
+.db-list-a {
+    color: #444444;
+    /*text-decoration:none;*/
+    /*cursor:pointer;*/
+    background: #f5f1e4;
+    border: none;
+    outline: none;
+    border-radius: var(--border-end-end-radius);
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: all 200ms ease-in;
+    font-family: "Myriad Pro", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 1.1rem;
+    text-decoration: none;
+
+}
+.db-list-a:hover{
+    background: #f7e5ab;
+}
+
+
+/* table css */
+
+.table-h1 {
+    color: #444444;
+    padding-top: 1.5rem;
+    text-align: center;
+    font-family: "Myriad Pro", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: auto;
+    color: #444444;
+    /* color: #1a7d96; */
+    font-family: "Myriad Pro", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+}
+
+td, th {
+    border: 1px solid #444444;;
+    text-align: left;
+    padding: 8px;
+}
+
+#customers, #consumption-table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.consuption-align {
+    text-align: right;
+    color: #4a4a3d;
+    font-family: "Myriad Pro", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+    font-size: 20px;
+    font-weight: 600;
+}
+ 
+/* login */
+
+.login-div {
+    text-align: center;
+    font-family: "Myriad Pro", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+    font-size: x-large;
+}
+
+
+/* chart css */
+
+.chart_container {
+    width: 100%;  
+    padding: 5px;  
+}
+
+#chart_img {
+    
+    width: 66%;  
+    height: auto; 
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* home page */
+
+.introduction {
+    padding-top: 5rem;
+    /* text-align: left; */
+    display: flex;
+    flex-direction: column;
+}
+
+.p-text-block {
+    text-align: center;
+    width: 65%;
+    padding-bottom: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 25px;
+    color: #808080;
+    opacity: .7;
+}
+
+.about-text {
+    text-align: center;
+    font-size: 30px;
+    max-width: 90%;
+    /* color: black; */
+    opacity: 1;
+    
+}
+
+.about-text-contact {
+    text-align: center;
+    font-size: 30px;
+    color: #FECB00;
+    opacity: 1;
+    
+}
+.contact-us-text {
+    text-align: center;
+    color: white;
+}
+
+.login-text {
+    font-size: 15px;
+    text-align: center;
+    color: black;
+}
+
+.energi-img-block {
+    max-width: 100%;  
+    height: auto; 
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.energi-logo {
+    max-width: 100%;  
+    height: auto; 
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 70px;
+}
+
+.hr-line {
+    width: 65%;
+    border: 1px dotted #5c4e46;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+
+/* operating status page */
+
+.operating-text {
+    text-align: center;
+    width: auto;
+    padding-bottom: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 25px;
+    color: #808080;
+    opacity: .7;
+
+    
+}
+
+.operating-status {
+    font-size: 45px;
+    /* color: #987A00; */
+    opacity: 1;
+}
+
+.energi-status {
+    display: flex;
+    flex-direction: column;
+}
+
+.operating-p {
+    font-size: 35px;
+}
+
+.contact-us-div-block {
+    background-color: #808080;
+}

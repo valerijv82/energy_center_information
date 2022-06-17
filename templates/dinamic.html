@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<h1 class="table-h1">Table "{{ table_name }}"</h1>
+
+<table>
+    <tr>
+        {% for field in table_fields %}
+            <th>{{field}}</th>
+        {% endfor %}
+    </tr>
+        {% for x in table_objects %}
+    <tr>
+            {% for y in x %}
+                <td>{{y}}</td>
+            {% endfor %}
+    </tr>        
+        {% endfor %}
+    </table>
+
+{% endblock content %}

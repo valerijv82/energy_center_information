@@ -1,0 +1,75 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <meta name="description" content="The HTML5 Herald">
+    <meta name="author" content="SitePoint">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% load static %}
+
+    <link rel="stylesheet" href="{% static '/admin/css/my_style.css' %}">
+
+    <title>{% block title %} Data collection app {% endblock title %}</title>
+
+</head>
+
+<body>
+    <div class="grid-container">
+        <div class="navbar">
+                <ul class="nav-list">
+                  <li class="nav-item">
+                    <a href="https://afgruppen.com/" target="_blank"><img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/0/0a/AF_Gruppen.svg" alt="logo"></a>
+                  </li>
+                  <li class="nav-item">
+                    <a  href="{% url 'home' %}">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="{% url 'operating_status' %}">Operating status</a>
+                  </li>
+                  <li class="nav-item">
+                    {% if user.is_authenticated %}
+                    <a href="{% url 'tables' %}">Tables</a>
+                    {% endif %}
+                  <li class="nav-item">
+                    {% if user.is_authenticated %}
+                    <a href="{% url 'requests' %}">Energy centrals</a>
+                    {% endif %}
+                  </li>
+                    <li class="nav-item nav-item-color"> 
+                      {% if user.is_authenticated %}
+                        User:&emsp;<a href="{% url 'admin:index' %}">{{user.username}}</a> 
+                    </li>
+                    <li class="nav-item">
+                      <button class="btn-primary"><a href="{% url 'logout' %}">  Log out  </a></button>
+                    </li>
+                    {% else %}
+                    <li class="nav-item">
+                      <button class="btn-primary"><a href="{% url 'login' %}">  Log In  </a>  </button>
+                    </li>
+                    {% endif %}
+                </ul>
+        </div>
+
+    
+    
+
+<br>
+<br>
+
+    {% block content %}
+        
+
+    {% endblock content %}
+
+   
+
+    {% block model %}
+
+    {% endblock %}
+</div>
+
+</body>
+
+</html>

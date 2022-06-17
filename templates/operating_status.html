@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    Operating status
+{% endblock title %}
+
+{% block content %}
+<div class="introduction">
+    <p class="operating-text operating-status">Operating status</p>
+
+    <div class="energi-logo energi-status">
+        <img src="{% static '/data_collection_web/media/Logo Myrvoll crop.png' %}" alt="Myrvoll-logo">
+        <p class="operating-text operating-p">Heat and hot water: <u>Normal</u></p>
+    </div>
+
+    <div class="energi-logo energi-status">
+        <img src="{% static '/data_collection_web/media/Billingstadt logo crop2.png' %}" alt="Billingstad-logo">
+        <p class="operating-text operating-p">Heat and hot water: <u>Normal</u></p>
+    </div>
+</div>
+
+{% endblock content %}

@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="img-container">
+    {% for query in query_list %}
+        <div class="request-img">
+            {% if 'three' == query %}                    
+                <a href="/requests/{{ query }}" id="query_three"><img alt="three" src="{% static '/data_collection_web/media/myrvoll.png' %}"></a>
+            {% endif %}
+        </div>
+        <div class="request-img">
+            {% if "four" == query %}    
+                <a href="/requests/{{ query }}" id="query_four"><img alt="four" src="{% static '/data_collection_web/media/Billingstadt.png' %}"></a>
+            {% endif %}
+        </div>
+    {% endfor %}
+</div>
+
+
+{% endblock content %}

@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    Homepage
+{% endblock title %}
+
+{% block content %}
+<div class="introduction">
+    <p class="p-text-block about-text">The Enaktiva Energy Centrals delivers renewable thermal energy to buildings in Norway <br> heating, hot water and cooling.</p>
+    <p class="p-text-block">The different centrals are established to ensore  to the developer's desire to ensure an energy solution that takes into account sustainability, stability and costs in the best possible way, and which does not place operation and maintenance tasks on consumers who have neither the time nor the expertise to do so. 
+    The Energy Centrals have solid owners who use professional suppliers to operate the plant in a proper way, so that each individual customer does not have to worry about the heat delivery </p>
+</div>
+<hr class="hr-line">
+<div class="energi-logo">
+    <img src="{% static '/data_collection_web/media/Logo Myrvoll crop.png' %}" alt="Myrvoll-logo">
+</div>
+
+<div class="energi-img-block">
+    <a href="https://www.myrvollenergi.no/"><img class="energi-img-resize" src="static\data_collection_web\media\Myrvoll Statsjon mod.jpg" alt="Myrvoll energi"></a>
+</div>
+<br>
+<br>
+<div class="div-text-block">
+    <p class="p-text-block">Myrvoll Energi AS supplies heating and hot water for the area around Myrvoll Station. The plant collects renewable heat from the ground and the drain, and uses heat pumps that raise the temperature for heating purposes. As a reserve on extra cold days or case of maintenance, the plant has an electric boiler that uses electricity.</p>
+    <!-- <p class="p-text-block">&emsp;&emsp; Myrvoll Energi AS supplies heating and hot water for the area around Myrvoll Station.
+         The company was established in response to the developer's desire to ensure an energy solution that takes into account sustainability,
+          stability and costs in the best possible way, and which does not place operation and maintenance tasks on consumers who have neither
+           the time nor the expertise to do so.
+        
+        <br><br>&emsp;&emsp; The system collects renewable heat from the ground and the drain, and uses heat pumps that raise the temperature for heating purposes.
+         As a reserve on extra cold days or in connection with. stop for maintenance, the plant has an electric boiler that uses electricity.
+        
+        <br><br>&emsp;&emsp; The power plant has solid owners who use professional players to operate the plant in a proper way, so that each individual customer
+         does not have to worry about the heat delivery.</p> -->
+</div>
+<hr class="hr-line">
+<div class="energi-logo">
+    <img src="{% static '/data_collection_web/media/Billingstadt logo crop2.png' %}" alt="Billingstad-logo">
+</div>
+
+<div class="energi-img-block">
+    <a href="https://www.billingstadenergi.no/"><img class="energi-img-resize" src="static\data_collection_web\media\Billingstad Energisentral mod.JPG" alt="Billingstad energi"></a>
+</div>
+<br>
+<br>
+<div class="div-text-block">
+    <p class="p-text-block">Billingstad Energi AS supplies heating and hot water for the area around Vestre Billingstad. The plant collects renewable heat from the ground through over 100 energy wells, and uses heat pumps that raise the temperature for heating purposes. As a reserve on extra cold days or case of maintenance, the plant has an electric boiler that uses electricity.</p>
+    <!-- <p class="p-text-block">&emsp;&emsp; Billingstad Energi AS supplies heating and hot water for the Vestre Billingstad area.
+         The company was established in response to the developer's desire to ensure an energy solution that takes into account
+          sustainability, stability and costs in the best possible way, and which does not place operation and maintenance tasks on
+           consumers who have neither the time nor the expertise to do so.
+
+           <br><br>&emsp;&emsp;The plant collects renewable heat from the ground and uses heat pumps that raise the temperature for heating purposes.
+         As a reserve on extra cold days or in connection with. stop for maintenance, the plant has an electric boiler that uses electricity.
+        
+         <br><br>&emsp;&emsp;The power plant has solid owners who use professional players to operate the plant in a proper way, so that each individual customer
+         does not have to worry about the heat delivery.</p> -->
+</div>
+<br>
+<br>
+<br>
+
+<div class="contact-us-div-block">
+    <p class="p-text-block about-text-contact">Contact Us</p>
+    <p class="p-text-block contact-us-text">If you want to get in touch with Myrvoll og Billingstad Energi send an email directly to <a href = "mailto:post@enaktiva.no">post@enaktiva.no</a></p>
+    {% if not user.is_authenticated %}
+    <p class="login-text">In order to see the energy production for each plant, please log in</p>
+    {% endif %}
+</div>
+
+
+{% endblock content %}
+
+{% block table2 %}
+
+{% endblock table2 %}

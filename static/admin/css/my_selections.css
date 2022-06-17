@@ -1,0 +1,18 @@
+
+
+.selector-bar {
+    padding: 0;
+    margin: 0;
+    background: #f5f0e8;
+    box-sizing: border-box;
+    height: 70px;
+    width: 100%;
+}
+
+
+.selector {
+    align-items: center;
+    line-height: 20px;
+    padding: 0;
+    margin: 0;
+}
